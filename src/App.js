@@ -1,8 +1,8 @@
 // Import de bibliotecas
 import './App.css';
-import {BrowserRouter, Routes, Route, Outlet, useNavigate, useParams} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, useNavigate, useParams } from "react-router-dom";
 import { useState , useEffect } from 'react';
-import { Form, Button, Table, Nav } from 'react-bootstrap';
+import { Container, Form, Button, Table, Nav } from 'react-bootstrap';
 
 // Define o endereço do servidor
 const endereco_servidor = 'http://localhost:8000';
@@ -17,17 +17,19 @@ function Layout(){
   // Renderiza o componente
   return (
     <>
-      <h1>Menu principal</h1>
-      <Nav defaultActiveKey="/" className="flex-column">
-        <Nav.Item as="incluir">
-          <Nav.Link href="/frmcadastrocliente/-1">1. Incluir</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="listar">
-          <Nav.Link href="/frmlistarcliente">2. Listar(Alterar, Excluir)</Nav.Link>
-        </Nav.Item>     
-      </Nav>
-      <hr />
-      <Outlet />
+      <Container>
+        <h1>Menu principal</h1>
+        <Nav defaultActiveKey="/" className="bg-light flex-column">
+          <Nav.Item as="incluir">
+            <Nav.Link href="/frmcadastrocliente/-1">1. Incluir</Nav.Link>
+          </Nav.Item>
+          <Nav.Item as="listar">
+            <Nav.Link href="/frmlistarcliente">2. Listar(Alterar, Excluir)</Nav.Link>
+          </Nav.Item>     
+        </Nav>
+        <hr />
+        <Outlet />
+      </Container>
     </>
   ) 
 };
