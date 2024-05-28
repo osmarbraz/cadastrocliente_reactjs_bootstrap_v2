@@ -260,7 +260,7 @@ function MenuPrincipal() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route path='frmcadastroCliente/:alterarId' element={<FrmCadastroCliente />} />
+            <Route path='frmcadastrocliente/:alterarId' element={<FrmCadastroCliente />} />
             <Route path='frmexcluircliente/:clienteId' element={<FrmExcluirCliente />} />
             <Route path='frmlistarcliente' element={<FrmListarCliente />} />
             <Route path='*' element={<NoPage />} />
